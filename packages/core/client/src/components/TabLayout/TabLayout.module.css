@@ -1,0 +1,5 @@
+.view-container {
+  padding: 4px;
+  height: 100%;
+  background-color: var(--dark-1);
+}

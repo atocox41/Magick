@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "ignorePatterns": ["!**/*", "**/node_modules/**", "**/*.d.ts"],
+  "plugins": ["@nx/eslint-plugin"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "no-extra-semi": "off",
+        "@typescript-eslint/no-extra-semi": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/ban-types": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {
+        "@typescript-eslint/no-extra-semi": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-unused-expressions": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "no-extra-semi": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "react/jsx-no-useless-fragment": "off",
+        "no-param-reassign": "off",
+        "no-case-declarations": "off",
+        "no-prototype-builtins": "off",
+        "prefer-rest-params": "off"
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ]
+}
